@@ -556,7 +556,7 @@ server {
         {{- end }}
     {{- end }}
     {{- if ne $https_method "nohttps" }}
-    listen {{ $globals.external_https_port }} ssl {{ $default_server }} http2;
+    listen {{ $globals.external_https_port }} ssl {{ $default_server }}http2;
         {{- if $globals.enable_ipv6 }}
     listen [::]:{{ $globals.external_https_port }} ssl {{ $default_server }};
         {{- end }}
