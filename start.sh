@@ -24,7 +24,7 @@ curl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl >ng
 # 5. 로컬 이미지 업데이트
 docker-compose pull
 
-# 6. .env 파일이 설정된 경우 특수 구성을 k추가
+# 6. .env 파일이 설정된 경우 특수 구성을 추가
 
 # 사용자가 Special Config 파일 설정 했는지 확인
 if [ ! -z ${USE_NGINX_CONF_FILES+X} ] && [ "$USE_NGINX_CONF_FILES" = true ]; then
