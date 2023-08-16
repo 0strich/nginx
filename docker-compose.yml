@@ -29,7 +29,7 @@ services:
     environment:
       SSL_POLICY: ${SSL_POLICY:-Mozilla-Intermediate}
     volumes:
-      - ${NGINX_FILES_PATH:-./data}/conf.d:/etc/nginx/conf.d
+      - ./conf.d:/etc/nginx/conf.d
       - ${NGINX_FILES_PATH:-./data}/vhost.d:/etc/nginx/vhost.d
       - ${NGINX_FILES_PATH:-./data}/html:/usr/share/nginx/html
       - ${NGINX_FILES_PATH:-./data}/certs:/etc/nginx/certs:ro
@@ -47,7 +47,7 @@ services:
     container_name: ${LETS_ENCRYPT:-nginx-letsencrypt}
     restart: always
     volumes:
-      - ${NGINX_FILES_PATH:-./data}/conf.d:/etc/nginx/conf.d
+      - ./conf.d:/etc/nginx/conf.d
       - ${NGINX_FILES_PATH:-./data}/vhost.d:/etc/nginx/vhost.d
       - ${NGINX_FILES_PATH:-./data}/html:/usr/share/nginx/html
       - ${NGINX_FILES_PATH:-./data}/certs:/etc/nginx/certs:rw
