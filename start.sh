@@ -35,7 +35,8 @@ if [ ! -z ${USE_NGINX_CONF_FILES+X} ] && [ "$USE_NGINX_CONF_FILES" = true ]; the
     # Copy the special configurations to the nginx conf folder
     cp -R ./conf.d/* $NGINX_FILES_PATH/conf.d
 
-    cat $NGINX_FILES_PATH/conf.d
+    ls $NGINX_FILES_PATH/conf.d
+    cat $NGINX_FILES_PATH/conf.d/default.conf
 
     # Check if there was an error and try with sudo
     if [ $? -ne 0 ]; then
