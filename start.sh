@@ -19,7 +19,7 @@ if [ ! -z ${SERVICE_NETWORK+X} ]; then
 fi
 
 # 4. 최신 nginx.tmpl 파일 다운로드
-curl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl >nginx.tmpl
+# curl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl >nginx.tmpl
 
 # 5. 로컬 이미지 업데이트
 docker-compose pull
